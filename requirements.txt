@@ -1,0 +1,18 @@
+torch
+torchvision
+numpy
+pandas
+tqdm
+scikit-learn
+matplotlib
+seaborn
+scipy
+PyYAML
+tensorboard
+einops
+networkx
+joblib
+
+# Optional, only if you later extend QGFL with more quantum/optimization tooling
+# qutip
+# cvxpy
