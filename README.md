@@ -103,45 +103,45 @@ Fidelity F       Fubini–Study Distance
 
 For a neural operator, forward responses are collected using PyTorch forward hooks.
 
-The response covariance is normalized to construct a density-matrix representation:
+The response covariance matrix is normalized to construct a density-matrix representation:
 
 $$
-\rho = \frac{C}{\operatorname{Tr}(C)}.
+\rho = \frac{C}{\mathrm{Tr}(C)}.
 $$
 
-The dominant eigenvector of the density matrix,
+The dominant eigenvector of the density matrix is obtained from
 
 $$
 \rho \psi = \lambda_{\max}\psi,
 $$
 
-is used as a compact quantum-state representation.
+where $\lambda_{\max}$ denotes the largest eigenvalue. The corresponding eigenvector $\psi$ is used as a compact quantum-state representation of the neural operator.
 
 ### 2. Quantum Fidelity
 
-For two operator states \(\psi_1\) and \(\psi_2\), their quantum fidelity is defined as
+For two normalized operator states $\psi_1$ and $\psi_2$, their quantum fidelity is defined as
 
 $$
 F(\psi_1,\psi_2)
 =
-\left|
-\langle\psi_1,\psi_2\rangle
-\right|^2.
+\left|\langle\psi_1 \mid \psi_2\rangle\right|^2.
 $$
 
-A larger \(F\) indicates stronger geometric alignment between the two operator representations.
+A larger fidelity value indicates stronger geometric alignment between the two operator representations.
 
 ### 3. Fubini–Study Distance
 
-The corresponding Fubini–Study distance is
+The corresponding Fubini–Study distance is defined as
 
 $$
-d_{\mathrm{FS}}
+d_{\mathrm{FS}}(\psi_1,\psi_2)
 =
-\arccos\left(\sqrt{F}\right).
+\arccos\left(
+\sqrt{F(\psi_1,\psi_2)}
+\right).
 $$
 
-This provides a coordinate-independent geometric measure between normalized quantum states.
+This metric measures the geometric separation between the two normalized quantum-state representations in the underlying projective Hilbert space.
 
 ---
 
