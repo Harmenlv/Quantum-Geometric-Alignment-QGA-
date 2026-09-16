@@ -525,7 +525,7 @@ If you find QGAF useful in your research, please consider citing the associated 
 }
 ```
 
-> **Paper status:** Under Review
+> **Paper status:** Revised Manuscript Submitted
 
 ---
 
